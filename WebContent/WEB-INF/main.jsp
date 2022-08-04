@@ -92,7 +92,7 @@ body {
 
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 		<div class="container-fluid">
 			<div class="icon">
 				<a class="navbar-brand" href="#"><img class="icon"
