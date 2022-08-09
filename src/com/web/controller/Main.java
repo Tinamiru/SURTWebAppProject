@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Main extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String url = "/WEB-INF/main.jsp";
+		String url = "/WEB-INF/views/main.jsp";
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 

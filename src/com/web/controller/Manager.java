@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Manager extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String url = "/WEB-INF/manager.jsp";
+		String url = "/WEB-INF/views/manager.jsp";
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
