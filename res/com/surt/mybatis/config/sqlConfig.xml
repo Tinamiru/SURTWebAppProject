@@ -4,13 +4,13 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
   <configuration>
-  	<properties resource="com/jsp/properties/db.properties" />
+  	<properties resource="com/surt/properties/db.properties" />
   	
   	<typeAliases>
   		<typeAlias type="java.lang.String" alias="str" />
 		<typeAlias type="java.lang.Integer" alias="int" />
 		
-		<typeAlias type="com.jsp.dto.MemberVO"  alias="member"/>
+		<typeAlias type="com.surt.dto.MemberVO"  alias="member"/>
   	</typeAliases>
   	
   	
@@ -33,7 +33,7 @@
   	
   	
   	<mappers>
-		<mapper resource="com/jsp/mybatis/mappers/Member-Mapper.xml"/>
+		<mapper resource="com/surt/mybatis/mappers/Member-Mapper.xml"/>
 	</mappers>
   </configuration>
   

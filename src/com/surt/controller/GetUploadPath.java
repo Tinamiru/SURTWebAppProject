@@ -11,7 +11,7 @@ public class GetUploadPath {
 	private static Properties properties = new Properties();
 
 	static {
-		String resource = "com/jsp/properties/upload.properties";
+		String resource = "com/surt/properties/upload.properties";
 		try {
 			Reader reader = Resources.getResourceAsReader(resource);
 			properties.load(reader);

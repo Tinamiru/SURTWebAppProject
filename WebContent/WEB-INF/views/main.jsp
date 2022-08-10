@@ -468,21 +468,26 @@ li {
 	<!-- /.container -->
 	<script>
 		const DATA_COUNT = 16;
-		const labels = [ 'ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP',
-				'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP',
-				'ISTJ', 'ISTP', ];
+		const labels = [ 'ENFJ', 'ENFP', 'ENTJ', 'ENTP',
+						 'ESFJ', 'ESFP', 'ESTJ', 'ESTP',
+						 'INFJ', 'INFP', 'INTJ', 'INTP',
+						 'ISFJ', 'ISFP', 'ISTJ', 'ISTP', ];
 
 		const data = {
 			labels : labels,
 			datasets : [ {
 				label : 'My First dataset',
+				
 				backgroundColor : [ '#52CEB0', '#FFA348', '#3462A3', '#DD5843',
-						'#FFCFCF', '#E0707E', '#587A4B', '#FF977B', '#C0D8FF',
-						'#277A64', '#BAB0FF', '#7FC2F4', '#FFCC71', '#A6BF6F',
-						'#DDDDDD', '#2A718C' ],
+									'#FFCFCF', '#E0707E', '#587A4B', '#FF977B',
+									'#C0D8FF', '#277A64', '#BAB0FF', '#7FC2F4',
+									'#FFCC71', '#A6BF6F', '#DDDDDD', '#2A718C' ],
 				borderColor : 'black',
-				data : [ 10, 20, 20, 10, 10, 20, 30, 40, 10, 20, 10, 10, 10,
-						30, 40, 50, 60, 30, 10, 20, 30 ],
+				
+				data : [ 10, 20, 20, 10,
+						 10, 20, 30, 40,
+						 10, 20, 10, 10,
+						 10, 30, 40, 50],
 			} ]
 		};
 
