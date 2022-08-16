@@ -2,6 +2,7 @@ package com.surt.action.member;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.surt.action.Action;
 import com.surt.controller.FileDownloadResolver;
@@ -20,12 +21,14 @@ public class MemberGetPictureAction implements Action {
 	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String url=null;
 		
-		String id = request.getParameter("id");
+		HttpSession session = request.getSession();
+		
+		MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");
 		
 		try {
-			MemberVO member = memberService.getMember(id);
+			MemberVO member = memberService.getMember(loginUser.getId());
 			
-			String fileName = member.getPicture();		
+			String fileName = member.getPicture();
 			String savedPath = GetUploadPath.getUploadPath("member.picture.upload");	
 			
 			
