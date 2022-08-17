@@ -1,10 +1,3 @@
-// NAV. Icon Click to Mainpage
-function goToMainPage() {
-	location.href = "common/main.do";
-}
-function goTologinPage() {
-	location.href = "common/login.do";
-}
 // UserInfo Id Click to MyPage
 function goToMyPage() {
 	// 마이페지이 경로 수정
@@ -16,7 +9,7 @@ function MemberPictureThumb(contextPath){
 	 for(var target of document.querySelectorAll('.manPicture')){	
 		 var id = target.getAttribute('data-id');
 		 
-		 target.style.backgroundImage="url('"+contextPath+"/member/getPicture.do?id="+id+"')";
+		 target.style.backgroundImage="url('"+contextPath+"/common/getPicture.do?id="+id+"')";
 		 target.style.backgroundPosition="center";
 		 target.style.backgroundRepeat="no-repeat";
 		 target.style.backgroundSize="cover";

@@ -31,7 +31,7 @@ body {
 	height: 4vw;
 	margin-right: 20px;
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 	cursor: pointer;
 }
 
@@ -76,7 +76,6 @@ body {
 
 footer {
 	position: relative;
-	transform: translateY(-100%);
 }
 
 .footer-fontcolor {
@@ -148,7 +147,7 @@ ul.footer-text>li>a {
 .container>div.main {
 	left: 215px;
 	width: 70vw;
-	height: 35vw;
+	height: 25vw;
 	padding: 10px 50px 25px 75px;
 }
 
@@ -227,4 +226,18 @@ ul.footer-text>li>a {
 .mylist:hover {
 	background-color: #e3ebee;
 	border: #2f3030;
+}
+
+td>a {
+	text-decoration: none;
+	color: black;
+	overflow: hidden;
+}
+
+td>a:hover {
+	color: gray;
+}
+
+a>p {
+	overflow: hidden;
 }

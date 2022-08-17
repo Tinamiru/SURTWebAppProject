@@ -26,7 +26,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 		<div class="container-fluid">
 			<div class="icon" title="Home Page">
-				<div class="icon" onclick="goToMainPage()"
+				<div class="icon" onclick="location.href='<%=request.getContextPath()%>/index.jsp'"
 					style="background-image: url(<%=request.getContextPath()%>/resources/img/icon.png);"></div>
 			</div>
 			<button class="navbar-toggler" type="button"
@@ -60,7 +60,7 @@
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#"
 							id="navbarScrollingDropdown" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false" style="font-weight: bold;"> ${loginUser.id} </a>
+							data-bs-toggle="dropdown" aria-expanded="false" style="font-weight: bold;"> ${loginUser.user_id} </a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarScrollingDropdown">
 								<li><a class="dropdown-item" href="#">마이페이지</a></li>
@@ -129,7 +129,7 @@
 							<div class="col-sm-12">
 								<div class="row">
 									<div class="col-sm-3">
-										<div class="manPicture" data-id="${loginUser.id }"
+										<div class="manPicture" data-id="${loginUser.user_id }"
 											style="box-shadow: 0 0 16px rgb(221, 221, 221); border: 2px solid #fff; display: block; width: 4vw; height: 4vw; margin: 0 auto; border-radius: 50%;">
 										</div>
 									</div>
@@ -137,7 +137,7 @@
 										<div class="row">
 											<div class="col-sm-4"
 												style="margin-top: 1%; font-weight: bold; font-size: 15px; cursor: pointer; justify-content: left;"
-												onclick="goToMyPage()">${loginUser.id }</div>
+												onclick="goToMyPage()">${loginUser.user_id }</div>
 											<div class="col-sm-8">
 												<button type="button" id="logout"
 													onclick="location.href='<%=request.getContextPath()%>/common/logout.do'">로그아웃</button>
@@ -201,8 +201,12 @@
 								<c:forEach var="i" begin="1" end="5">
 									<tr>
 										<th class="borad-number" scope="row">${i}</th>
-										<td class="borad-auther">작성자</td>
-										<td class="borad-content">게시글 제목</td>
+										<td class="borad-auther">board.userid ${i}</td>
+										<td class="borad-content">
+											<a href="#">
+												board.content ${i }
+											</a>
+										</td>
 									</tr>
 								</c:forEach>
 							</tbody>
@@ -227,8 +231,13 @@
 								<c:forEach var="i" begin="1" end="10">
 									<tr>
 										<th class="borad-number" scope="row">${i}</th>
-										<td class="borad-auther">작성자</td>
-										<td class="borad-content">게시글 제목</td>
+										<td class="borad-auther">board.userid ${i}</td>
+										<td class="borad-content">
+											<a href="#">
+												board.content ${i }
+											</a>
+										</td>
+										
 									</tr>
 								</c:forEach>
 							</tbody>
@@ -291,14 +300,14 @@
 						'#DDDDDD', '#2A718C' ],
 				borderColor : 'black',
 
-// 				data : [${mbti.enfj}, ${mbti.enfp}, ${mbti.entj}, ${mbti.entp}, 
-// 						${mbti.esfj}, ${mbti.esfp}, ${mbti.estj}, ${mbti.estp},
-// 						${mbti.infj}, ${mbti.infp}, ${mbti.intj}, ${mbti.intp},
-// 						${mbti.isfj}, ${mbti.isfp}, ${mbti.istj}, ${mbti.istp},
-// 					   ],
+				data : [${mbti.ENFJ}, ${mbti.ENFP}, ${mbti.ENTJ}, ${mbti.ENTP}, 
+						${mbti.ESFJ}, ${mbti.ESFP}, ${mbti.ESTJ}, ${mbti.ESTP},
+						${mbti.INFJ}, ${mbti.INFP}, ${mbti.INTJ}, ${mbti.INTP},
+						${mbti.ISFJ}, ${mbti.ISFP}, ${mbti.ISTJ}, ${mbti.ISTP},
+					   ],
 				
-				data : [ 10, 20, 20, 10, 10, 20, 30, 40, 10, 20, 10, 10, 10,
-						30, 40, 50 ],
+// 				data : [ 10, 20, 20, 10, 10, 20, 30, 40, 10, 20, 10, 10, 10,
+// 						30, 40, 50 ],
 			} ]
 		};
 

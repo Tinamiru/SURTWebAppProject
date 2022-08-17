@@ -9,9 +9,10 @@ import com.surt.action.Action;
 import com.surt.dto.MemberVO;
 import com.surt.service.MemberService;
 
-public class MemberIdCheckAction implements Action {
-	
+public class MemberNicknameCheckAction implements Action {
+
 	private MemberService memberService;
+
 	public void setMemberService(MemberService memberService) {
 		this.memberService = memberService;
 	}
@@ -19,25 +20,24 @@ public class MemberIdCheckAction implements Action {
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String url = null;
-		
-		String id = request.getParameter("user_id");
-		
+
+		String nickname = request.getParameter("nickname");
+
 		String resultStr = "";
-		
+
 		try {
-			MemberVO member = memberService.getMember(id);
-			if(member != null) {
+			MemberVO member = memberService.checkNickname(nickname);
+			if (member != null) {
 				resultStr = "DUPLICATED";
 			}
-			
+
 			response.setContentType("text/plain;charset=utf-8");
 			PrintWriter out = response.getWriter();
 			out.print(resultStr);
 			out.close();
-		}catch(Exception e) {
+		} catch (Exception e) {
 			response.sendError(response.SC_INTERNAL_SERVER_ERROR);
 		}
 		return url;
 	}
-
 }

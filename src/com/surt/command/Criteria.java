@@ -1,10 +1,14 @@
 package com.surt.command;
 
 public class Criteria {
+
 	private int page = 1;
 	private int perPageNum = 10;
 	private String searchType;
 	private String keyword;
+	public int getPage() {
+		return page;
+	}
 
 	public String getSearchType() {
 		return searchType;
@@ -20,10 +24,6 @@ public class Criteria {
 
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
-	}
-
-	public int getPage() {
-		return page;
 	}
 
 	public void setPage(int page) {
@@ -49,4 +49,5 @@ public class Criteria {
 	public int getStartRowNum() {
 		return (this.page - 1) * perPageNum;
 	}
+
 }

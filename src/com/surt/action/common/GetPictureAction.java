@@ -1,4 +1,4 @@
-package com.surt.action.member;
+package com.surt.action.common;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,7 +10,7 @@ import com.surt.controller.GetUploadPath;
 import com.surt.dto.MemberVO;
 import com.surt.service.MemberService;
 
-public class MemberGetPictureAction implements Action {
+public class GetPictureAction implements Action {
 
 	private MemberService memberService;
 	public void setSearchMemberService(MemberService memberService) {
@@ -26,7 +26,7 @@ public class MemberGetPictureAction implements Action {
 		MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");
 		
 		try {
-			MemberVO member = memberService.getMember(loginUser.getId());
+			MemberVO member = memberService.getMember(loginUser.getUser_id());
 			
 			String fileName = member.getPicture();
 			String savedPath = GetUploadPath.getUploadPath("member.picture.upload");	

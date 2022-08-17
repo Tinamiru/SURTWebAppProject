@@ -18,6 +18,8 @@ public class MainPageAction implements Action{
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String url="/common/main";
+		request.setAttribute("mbti", service.getMBTIList());
+		System.out.println("url: " + url);
 		try {
 
 		} catch (Exception e) {

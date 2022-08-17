@@ -3,41 +3,43 @@ package com.surt.dto;
 import java.util.Date;
 
 public class MemberVO {
-	private String id; // 아이디
-	private String pwd; // 패스워드
-	private String name = "---"; // 이름
-	private String phone; // 전화번호
-	private String email; // 이메일
-	private String address;// 주소
-	private String picture; // 사진파일 경로/파일명
 
-	private Date regDate; // 등록일
-	private String authority; // 권한
-	private int enabled; // 사용여부
-	private String register;// 등록자
+	// 사용자 입력 정보
+	private int user_idx; // 아이디
+	private String user_id;
+	private String name = "semi"; // 이름
+	private String email; // 이메일
+	private String password; // 패스워드
+	private String birth; // 전화번호
+	private String address; // 주소
+	private String nickname;
+	private String gender;
+	private String phone; // 전화번호
+	private String picture; // 사진파일 경로/파일명
+	private int agree_tos;
+	private String role;
+
+	// 시스템 정보
+	private Date regist_date; // 등록일
+	private Date updated_at;
 
 	public MemberVO() {
 	}
 
-	public MemberVO(String id, String pwd) {
-		this.id = id;
-		this.pwd = pwd;
+	public int getUser_idx() {
+		return user_idx;
 	}
 
-	public String getId() {
-		return id;
+	public void setUser_idx(int user_idx) {
+		this.user_idx = user_idx;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public String getUser_id() {
+		return user_id;
 	}
 
-	public String getPwd() {
-		return pwd;
-	}
-
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
 
 	public String getName() {
@@ -48,20 +50,28 @@ public class MemberVO {
 		this.name = name;
 	}
 
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
 	public String getEmail() {
 		return email;
 	}
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getBirth() {
+		return birth;
+	}
+
+	public void setBirth(String birth) {
+		this.birth = birth;
 	}
 
 	public String getAddress() {
@@ -72,6 +82,30 @@ public class MemberVO {
 		this.address = address;
 	}
 
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
 	public String getPicture() {
 		return picture;
 	}
@@ -80,40 +114,44 @@ public class MemberVO {
 		this.picture = picture;
 	}
 
-	public Date getRegDate() {
-		return regDate;
+	public int getAgree_tos() {
+		return agree_tos;
 	}
 
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
+	public void setAgree_tos(int agree_tos) {
+		this.agree_tos = agree_tos;
 	}
 
-	public String getAuthority() {
-		return authority;
+	public String getRole() {
+		return role;
 	}
 
-	public void setAuthority(String authority) {
-		this.authority = authority;
+	public void setRole(String role) {
+		this.role = role;
 	}
 
-	public int getEnabled() {
-		return enabled;
+	public Date getRegist_date() {
+		return regist_date;
 	}
 
-	public void setEnabled(int enabled) {
-		this.enabled = enabled;
+	public void setRegist_date(Date regist_date) {
+		this.regist_date = regist_date;
 	}
 
-	public String getRegister() {
-		return register;
+	public Date getUpdated_at() {
+		return updated_at;
 	}
 
-	public void setRegister(String register) {
-		this.register = register;
+	public void setUpdated_at(Date updated_at) {
+		this.updated_at = updated_at;
 	}
 
 	@Override
 	public String toString() {
-		return this.id;
+		return "MemberVO [user_idx=" + user_idx + ", user_id=" + user_id + ", name=" + name + ", email=" + email
+				+ ", password=" + password + ", birth=" + birth + ", address=" + address + ", nickname=" + nickname
+				+ ", gender=" + gender + ", phone=" + phone + ", picture=" + picture + ", agree_tos=" + agree_tos
+				+ ", role=" + role + ", regist_date=" + regist_date + ", updated_at=" + updated_at + "]";
 	}
+
 }
