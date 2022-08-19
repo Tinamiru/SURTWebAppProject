@@ -11,6 +11,9 @@
 		<typeAlias type="java.lang.Integer" alias="int" />
 		
 		<typeAlias type="com.surt.dto.MemberVO"  alias="member"/>
+		<typeAlias type="com.surt.dto.QuestionVO"  alias="question"/>
+		<typeAlias type="com.surt.dto.SikdangVO" alias="sikdang" />
+		<typeAlias type="com.surt.dto.PostVO" alias="post" />
   	</typeAliases>
   	
   	
@@ -34,6 +37,9 @@
   	
   	<mappers>
 		<mapper resource="com/surt/mybatis/mappers/Member-Mapper.xml"/>
+		<mapper resource="com/surt/mybatis/mappers/Question-Mapper.xml"/>
+		<mapper resource="com/surt/mybatis/mappers/Post-Mapper.xml"/>
+		
 	</mappers>
   </configuration>
   

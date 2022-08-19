@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <script>
-	if('${loginUser.id}'){
+	if('${loginUser.user_id}'){
 		location.href="<%=request.getContextPath()%>/common/main.do";	
 	}else{
 		location.href="<%=request.getContextPath()%>/common/loginForm.do";			

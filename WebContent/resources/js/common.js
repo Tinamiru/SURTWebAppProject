@@ -1,3 +1,13 @@
+// NAV. Icon Click to Mainpage
+function goToMainPage() {
+	location.href = "main.do";
+}
+function goMainPage(path) {
+	location.href = path + "/common/main.do";
+}
+function goTologinPage() {
+	location.href = "login.do";
+}
 // UserInfo Id Click to MyPage
 function goToMyPage() {
 	// 마이페지이 경로 수정

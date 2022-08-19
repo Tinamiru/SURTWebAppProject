@@ -10,10 +10,12 @@ public class MemberRegistCommand {
 	private String name = "semi"; // 이름
 	private String[] email; // 이메일
 	private String password; // 패스워드
-	private String[] birth; // 생일
-	private String address; // 주소
+	private String birth; // 생일
+	private String[] address; // 주소
 	private String nickname;
 	private String picture = "defaultPicture.jpg";
+	private String mbti = "CUTE";
+
 
 	private String gender;
 	private String[] phone; // 전화번호
@@ -51,11 +53,11 @@ public class MemberRegistCommand {
 		this.password = password;
 	}
 
-	public String[] getBirth() {
+	public String getBirth() {
 		return birth;
 	}
 
-	public void setBirth(String[] birth) {
+	public void setBirth(String birth) {
 		this.birth = birth;
 	}
 
@@ -67,11 +69,11 @@ public class MemberRegistCommand {
 		this.picture = picture;
 	}
 
-	public String getAddress() {
+	public String[] getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress(String[] address) {
 		this.address = address;
 	}
 
@@ -98,6 +100,14 @@ public class MemberRegistCommand {
 	public void setPhone(String[] phone) {
 		this.phone = phone;
 	}
+	
+	public String getMbti() {
+		return mbti;
+	}
+
+	public void setMbti(String mbti) {
+		this.mbti = mbti;
+	}
 
 	public int getAgree_tos() {
 		return agree_tos;
@@ -121,17 +131,17 @@ public class MemberRegistCommand {
 	public MemberVO toMemberVO() {
 		String phone = "";
 		String email = "";
-		String birth = "";
+		String address ="";
 
 		for (String data1 : this.phone) {
 			phone += data1;
 		}
+		
+		for (String data2 : this.address) {
+			address += data2;
+		}
 
 		email = this.email[0] + "@" + this.email[1];
-
-		for (String data3 : this.birth) {
-			birth += data3;
-		}
 
 		// MemberVO setting
 		MemberVO member = new MemberVO();
@@ -145,6 +155,7 @@ public class MemberRegistCommand {
 		member.setPicture(picture);
 		member.setNickname(nickname);
 		member.setGender(gender);
+		member.setMbti(mbti);
 		member.setAgree_tos(1);
 		member.setRegist_date(new Date());
 		return member;

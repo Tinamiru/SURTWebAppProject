@@ -21,25 +21,6 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public Map<String, Object> getMemberList(Criteria cri) throws SQLException {
-
-		Map<String, Object> dataMap = null;
-
-		// 처리.......
-		List<MemberVO> memberList = memberDAO.selectMemberList(cri);
-
-		PageMaker pageMaker = new PageMaker();
-		pageMaker.setCri(cri);
-		pageMaker.setTotalCount(memberDAO.selectMemberListCount(cri));
-
-		dataMap = new HashMap<String, Object>();
-		dataMap.put("memberList", memberList);
-		dataMap.put("pageMaker", pageMaker);
-
-		return dataMap;
-	}
-
-	@Override
 	public MemberVO getMember(String id) throws SQLException {
 		MemberVO member = memberDAO.selectMemberById(id);
 		return member;
@@ -80,16 +61,17 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public Map<String, Integer> getMBTIList() throws SQLException {
+		// 수정.....?
 		String[] mbtiList = new String[] { "ENFJ", "ENFP", "ENTJ", "ENTP", "ESFJ", "ESFP", "ESTJ", "ESTP", "INFJ",
-				"INFP", "INTJ", "INTP", "ISFJ", "ISFP", "ISTJ", "ISTP" };
+				"INFP", "INTJ", "INTP", "ISFJ", "ISFP", "ISTJ", "ISTP","CUTE" };
 
 		Map<String, Integer> mbtiMap = new HashMap<String, Integer>();
-		
-		
+
 		for (String mbti : mbtiList) {
 			mbtiMap.put(mbti, memberDAO.selectMBTI(mbti));
 		}
 
 		return mbtiMap;
 	}
+
 }

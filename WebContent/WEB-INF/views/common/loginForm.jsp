@@ -171,32 +171,32 @@ ul.imgs li{
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									<div class="img"
-										style="background-image: url(<%=request.getContextPath()%>/resources/img/성겸.png)"
+										style="background-image: url(<%=request.getContextPath()%>/resources/img/loginForm/loginForm_face_성겸.png)"
 										onclick=""></div>
 								</div>
 								<div class="carousel-item">
 									<div class="img"
-										style="background-image: url(<%=request.getContextPath()%>/resources/img/건영.png)"
+										style="background-image: url(<%=request.getContextPath()%>/resources/img/loginForm/loginForm_face_건영.png)"
 										onclick=""></div>
 								</div>
 								<div class="carousel-item">
 									<div class="img"
-										style="background-image: url(<%=request.getContextPath()%>/resources/img/미정.png)"
+										style="background-image: url(<%=request.getContextPath()%>/resources/img/loginForm/loginForm_face_미정.png)"
 										onclick=""></div>
 								</div>
 								<div class="carousel-item">
 									<div class="img"
-										style="background-image: url(<%=request.getContextPath()%>/resources/img/은정.jpg)"
+										style="background-image: url(<%=request.getContextPath()%>/resources/img/loginForm/loginForm_face_은정.jpg)"
 										onclick=""></div>
 								</div>
 								<div class="carousel-item">
 									<div class="img"
-										style="background-image: url(<%=request.getContextPath()%>/resources/img/정현.png)"
+										style="background-image: url(<%=request.getContextPath()%>/resources/img/loginForm/loginForm_face_정현.png)"
 										onclick=""></div>
 								</div>
 								<div class="carousel-item">
 									<div class="img"
-										style="background-image: url(<%=request.getContextPath()%>/resources/img/재린.png)"
+										style="background-image: url(<%=request.getContextPath()%>/resources/img/loginForm/loginForm_face_재린.png)"
 										onclick=""></div>
 								</div>
 							</div>

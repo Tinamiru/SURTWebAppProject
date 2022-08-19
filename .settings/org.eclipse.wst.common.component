@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="yourTendencyWebApp">
+    <wb-module deploy-name="GOC_semi">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/res"/>
-        <property name="java-output-path" value="/yourTendencyWebApp/build/classes"/>
-        <property name="context-root" value="yourTendencyWebApp"/>
+        <property name="context-root" value="GOC_semi"/>
+        <property name="java-output-path" value="/GOC_semi/build/classes"/>
     </wb-module>
 </project-modules>
